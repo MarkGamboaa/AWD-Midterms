@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+a,
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+/* NAVBAR */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000; /* Add this line */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); /* Optional: for better overlay look */
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+section {
+  padding-top: 4vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* Profile Section */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section_pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section_text {
+  align-self: center;
+  text-align: center;
+}
+
+.section_text p {
+  font-weight: 600;
+}
+
+.section_text_p1 {
+  text-align: center;
+}
+
+.section_text_p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+.icon:hover,
+.icon:focus {
+  transform: scale(1.15) rotate(-8deg);
+  filter: brightness(1.2) drop-shadow(0 0 24px #161f9b)
+    drop-shadow(0 0 48px #161f9b);
+}
+
+/* ABOUT */
+#about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.about-btns-row {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+
+.about-btn {
+  padding: 0.7rem 2rem;
+  margin: 0 0.5rem 1rem 0.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #2d3436;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px #00000050;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  text-decoration: none;
+  font-weight: 500;
+  outline: none;
+  display: inline-block;
+}
+.about-btn:hover,
+.about-btn:focus {
+  background-color: #fd9644;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  text-decoration: none;
+}
+
+#about-extra-content {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-list {
+  list-style: disc;
+  text-align: left;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+}
+
+.about-video-container iframe {
+  width: 560px;
+  height: 315px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #0002;
+}
+
+.about-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about-modal-content {
+  background: #fff;
+  color: #222;
+  margin: 8% auto;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  animation: modalPop 0.25s;
+}
+
+@keyframes modalPop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.about-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fd9644;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.about-modal-close:hover {
+  color: #e17055;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px #0001;
+}
+.cert-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+}
+.cert-link {
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.95em;
+}
+.cert-link:hover {
+  color: #217dbb;
+}
+
+/* CALCULATOR */
+.calculator-center {
+  min-height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  width: 320px;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  background: #111;
+  color: #0f0;
+  border: none;
+  font-size: 32px;
+  text-align: right;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.calcu-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.calcu-btn {
+  height: 60px;
+  font-size: 24px;
+  border: none;
+  border-radius: 15px;
+  background-color: #2d3436;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px #00000050;
+  transition: all 0.2s ease;
+}
+
+.calcu-btn:hover {
+  background-color: #636e72;
+}
+
+.calcu-btn.operator {
+  background-color: #fd9644;
+}
+
+.calcu-btn.operator:hover {
+  background-color: #e17055;
+}
+
+.calcu-btn.equals {
+  background-color: #00b894;
+  grid-row: span 2;
+}
+
+.calcu-btn.equals:hover {
+  background-color: #00a884;
+}
+
+.calcu-btn.zero {
+  grid-column: span 2;
+}
+
+/* GAME */
+.game-center {
+  min-height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  background: #1e1e1e;
+  padding: 32px 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  min-width: 320px;
+}
+
+.game-container h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  color: #fd9644;
+}
+
+.game-container button {
+  margin: 0 10px 20px 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #2d3436;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px #00000050;
+  transition: background 0.2s;
+}
+
+.game-container button:hover {
+  background-color: #636e72;
+}
+
+.game-container #result {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.5rem 0;
+  color: #00b894;
+}
+
+.game-container a {
+  color: #fd9644;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.game-container p {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.game-container a:hover {
+  color: #e17055;
+}
+
+/* CURRENCY CONVERTER */
+.currencyconv-center {
+  min-height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currencyconvr {
+  background: #1e1e1e;
+  padding: 32px 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  min-width: 320px;
+  width: 450px;
+}
+
+.currencyconvr h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #f1c40f;
+  text-align: center;
+}
+
+.currencyconvr input.display {
+  background: #111;
+  color: #0f0;
+  border: none;
+  font-size: 28px;
+  text-align: right;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+}
+
+.currencyconvr input.display::placeholder {
+  text-align: center;
+}
+
+.currencyconvr .currencyconv-select-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.currencyconvr select.calcu-btn {
+  background-color: #2d3436;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px #00000050;
+  transition: background 0.2s;
+  flex: 1;
+}
+
+.currencyconvr select.calcu-btn:focus {
+  outline: 2px solid #fd9644;
+}
+
+.currencyconvr .currencyconv-arrow {
+  align-self: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.currencyconv-btn {
+  height: 50px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #00b894;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px #00000050;
+  transition: background 0.2s;
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.currencyconv-btn:hover {
+  background-color: #00a884;
+}
+
+#convertedResult {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #00b894;
+  min-height: 32px;
+  margin-top: 10px;
+}
