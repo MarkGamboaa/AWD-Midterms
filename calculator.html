@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo"><a href="index.html">Mark Gamboa</a></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="currencyConverter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo"><a href="index.html">Mark Gamboa</a></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li>
+            <a href="calculator.html" onclick="toggleMenu()">Calculator</a>
+          </li>
+          <li><a href="game.html" onclick="toggleMenu()">Game</a></li>
+          <li>
+            <a href="currencyConverter.html" onclick="toggleMenu()"
+              >Currency Converter</a
+            >
+          </li>
+        </div>
+      </div>
+    </nav>
+    <!-- CENTER CALCULATOR -->
+    <div class="calculator-center">
+      <div class="calculator">
+        <input type="text" id="display" class="display" disabled />
+
+        <div class="calcu-buttons">
+          <button class="calcu-btn operator" onclick="clearDisplay()">C</button>
+          <button class="calcu-btn operator" onclick="deleteLast()">←</button>
+          <button class="calcu-btn operator" onclick="appendValue('/')">
+            ÷
+          </button>
+          <button class="calcu-btn operator" onclick="appendValue('*')">
+            ×
+          </button>
+
+          <button class="calcu-btn" onclick="appendValue('7')">7</button>
+          <button class="calcu-btn" onclick="appendValue('8')">8</button>
+          <button class="calcu-btn" onclick="appendValue('9')">9</button>
+          <button class="calcu-btn operator" onclick="appendValue('-')">
+            −
+          </button>
+
+          <button class="calcu-btn" onclick="appendValue('4')">4</button>
+          <button class="calcu-btn" onclick="appendValue('5')">5</button>
+          <button class="calcu-btn" onclick="appendValue('6')">6</button>
+          <button class="calcu-btn operator" onclick="appendValue('+')">
+            +
+          </button>
+
+          <button class="calcu-btn" onclick="appendValue('1')">1</button>
+          <button class="calcu-btn" onclick="appendValue('2')">2</button>
+          <button class="calcu-btn" onclick="appendValue('3')">3</button>
+          <button class="calcu-btn equals" onclick="calculate()">=</button>
+
+          <button class="calcu-btn zero" onclick="appendValue('0')">0</button>
+          <button class="calcu-btn" onclick="appendValue('.')">.</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
