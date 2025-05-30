@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Gamboa</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Mark Gamboa</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="currencyConverter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Mark Gamboa</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li>
+            <a href="calculator.html" onclick="toggleMenu()">Calculator</a>
+          </li>
+          <li><a href="game.html" onclick="toggleMenu()">Game</a></li>
+          <li>
+            <a href="currencyConverter.html" onclick="toggleMenu()"
+              >Currency Converter</a
+            >
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="profile">
+      <div class="section_pic-container">
+        <img src="img/profile-pic.png" alt="Profile Picture" />
+      </div>
+      <div class="section_text">
+        <p class="section_text_p1"><span id="greeting"></span>, I'm</p>
+        <h1 class="title">Mark Gamboa</h1>
+        <p class="section_text_p2">Frontend Developer</p>
+        <div id="socials-container">
+          <img
+            src="img/linkedin.png"
+            alt="LinkedIn"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/markgamboaa/')"
+          />
+          <img
+            src="img/github.png"
+            alt="Github"
+            class="icon"
+            onclick="window.open('https://github.com/MarkGamboaa')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
