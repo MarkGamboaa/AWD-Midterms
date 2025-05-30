@@ -48,6 +48,7 @@ function appendValue(value) {
 //Game
 let playerScore = 0;
 let computerScore = 0;
+let drawScore = 0;
 
 function play(playerChoice) {
   const choices = ["rock", "paper", "scissors"];
@@ -56,6 +57,7 @@ function play(playerChoice) {
 
   if (playerChoice === computerChoice) {
     resultText = `It's a draw!`;
+    drawScore++;
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
@@ -70,6 +72,7 @@ function play(playerChoice) {
 
   document.getElementById("playerScore").textContent = playerScore;
   document.getElementById("computerScore").textContent = computerScore;
+  document.getElementById("drawScore").textContent = drawScore;
 
   document.getElementById("result").innerHTML = `
     <div style="display:flex;justify-content:center;align-items:center;gap:30px;">
@@ -90,6 +93,16 @@ function play(playerChoice) {
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
+  drawScore = 0;
+  document.getElementById("playerScore").textContent = playerScore;
+  document.getElementById("computerScore").textContent = computerScore;
+  document.getElementById("drawScore").textContent = drawScore;
+  document.getElementById("result").innerHTML = "";
+}
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
   document.getElementById("playerScore").textContent = playerScore;
   document.getElementById("computerScore").textContent = computerScore;
   document.getElementById("result").innerHTML = "";
@@ -99,6 +112,7 @@ function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
+//Currency Converter
 const rates = {
   USD: { USD: 1, PHP: 58, EUR: 0.92, JPY: 157, GBP: 0.79 },
   PHP: { USD: 0.017, PHP: 1, EUR: 0.016, JPY: 2.7, GBP: 0.014 },
