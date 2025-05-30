@@ -100,14 +100,6 @@ function resetGame() {
   document.getElementById("result").innerHTML = "";
 }
 
-function resetGame() {
-  playerScore = 0;
-  computerScore = 0;
-  document.getElementById("playerScore").textContent = playerScore;
-  document.getElementById("computerScore").textContent = computerScore;
-  document.getElementById("result").innerHTML = "";
-}
-
 function capitalize(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
