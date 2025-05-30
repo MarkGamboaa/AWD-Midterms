@@ -64,6 +64,12 @@
     height: 83vh;
     margin-bottom: 0;
   }
+  .game-container {
+    width: 320px;
+  }
+  .currencyconvr {
+    width: 320px;
+  }
   .about-containers,
   .btn-container {
     flex-wrap: wrap;
