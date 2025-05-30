@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>
           <div class="cert-item">
-            <img src="img/certifications/freecodecamp.png" alt="freeCodeCamp logo" class="cert-logo" />
+            <img src="img/certifications/freeCodeCamp.png" alt="freeCodeCamp logo" class="cert-logo" />
             <div>
               <strong>JavaScript Algorithms and Data Structures</strong><br>
               freeCodeCamp<br>
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>
           <div class="cert-item">
-            <img src="img/certifications/freecodecamp.png" alt="freeCodeCamp logo" class="cert-logo" />
+            <img src="img/certifications/freeCodeCamp.png" alt="freeCodeCamp logo" class="cert-logo" />
             <div>
               <strong>Responsive Web Design</strong><br>
               freeCodeCamp<br>
