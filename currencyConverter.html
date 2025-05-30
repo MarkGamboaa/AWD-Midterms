@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo"><a href="index.html">Mark Gamboa</a></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="currencyConverter.html">Currency Converter</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo"><a href="index.html">Mark Gamboa</a></div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li>
+            <a href="calculator.html" onclick="toggleMenu()">Calculator</a>
+          </li>
+          <li><a href="game.html" onclick="toggleMenu()">Game</a></li>
+          <li>
+            <a href="currencyConverter.html" onclick="toggleMenu()"
+              >Currency Converter</a
+            >
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="currencyconv-center">
+      <div class="currencyconvr">
+        <h2>Currency Converter</h2>
+        <input
+          type="number"
+          id="amount"
+          class="display"
+          placeholder="Enter amount"
+        />
+        <div class="currencyconv-select-row">
+          <select id="fromCurrency" class="calcu-btn">
+            <option value="USD">USD</option>
+            <option value="PHP">PHP</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <span class="currencyconv-arrow">→</span>
+          <select id="toCurrency" class="calcu-btn">
+            <option value="PHP">PHP</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+        <button class="currencyconv-btn" onclick="convertCurrency()">
+          Convert
+        </button>
+        <div id="convertedResult"></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
